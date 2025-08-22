@@ -1,0 +1,31 @@
+header{
+  background-color: #8AC7FA;
+  padding: .5rem 1rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1{
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.headerBar .openMenuBtn{
+  background-color: transparent;
+  color: #FFFFFF;
+  height: 50px;
+  padding: .5rem 1rem;
+  margin: auto 0;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.headerBar .openMenuBtn:hover{
+    background-color: #78B6EA;
+}
