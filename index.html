@@ -13,6 +13,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/sidebar.css">
     
     <!-- Font Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,8 +23,26 @@
 
 </head>
 <body>
-    <section class="content">
+    <header>
         <h1>Pokedex</h1>
+
+        <div class="headerBar">
+            <button id="openMenuBtn" class="openMenuBtn" type="button">☰</button>
+        </div>
+        
+        <nav id="sidebar" class="sidebar">
+            
+            <ul>
+                <button id="closeMenuBtn">✖</button>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Info</a></li>
+            </ul>
+            <p>Developed by Gustavo Pereira</p>
+        </nav>
+
+    </header>
+
+    <section class="content">
 
         <Ol id="pokemonList" class="pokemons">
             <!--Dinâmico pelo JS-->

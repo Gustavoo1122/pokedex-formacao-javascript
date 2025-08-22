@@ -48,3 +48,26 @@ loadMoreButton.addEventListener('click', () => {
     else
         loadPokemonItens(offset, limit);
 })
+
+
+const openMenuBtn = document.getElementById("openMenuBtn");
+const sideBar = document.getElementById("sidebar");
+const closeMenuBtn = document.getElementById("closeMenuBtn");
+
+openMenuBtn.addEventListener("click", () => {
+  sideBar.classList.add("active");
+});
+
+closeMenuBtn.addEventListener("click", () => {
+  sideBar.classList.remove("active");
+});
+
+document.addEventListener("click", (event) => {
+  if (
+    sideBar.classList.contains("active") && // só verifica se estiver aberto
+    !sideBar.contains(event.target) &&      // clique não foi dentro do menu
+    event.target !== openMenuBtn                // clique não foi no botão abrir
+  ) {
+    sideBar.classList.remove("active");
+  }
+});
