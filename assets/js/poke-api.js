@@ -1,5 +1,8 @@
 const pokeApi = {}
 
+const limit = 10;
+let offset = 0;
+
 function convertPokeApiDetailToPokemon(pokeDetail){
     const pokemon = new Pokemon ();
     pokemon.number = pokeDetail.id;
@@ -9,6 +12,11 @@ function convertPokeApiDetailToPokemon(pokeDetail){
     const [type] = types;
     pokemon.types = types;
     pokemon.type = type;
+
+    pokemon.height = pokeDetail.height;
+    pokemon.weight = pokeDetail.weight;
+
+    pokemon.skills = pokeDetail.abilities.map((abilitySlot) => abilitySlot.ability.name);
 
     pokemon.image = pokeDetail.sprites.other.dream_world.front_default;
 
@@ -22,7 +30,7 @@ pokeApi.getPokemonDetail = (pokemon) => {
             .then(convertPokeApiDetailToPokemon)
 }
 
-pokeApi.getPokemons = (offset = 0, limit = 5) => {
+pokeApi.getPokemons = (offset = 0, limit = 151) => {
     const url = `https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`;
 
     return fetch(url)

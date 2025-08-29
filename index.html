@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
     <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/modal.css">
     <link rel="stylesheet" href="/assets/css/sidebar.css">
     
     <!-- Font Roboto -->
@@ -43,10 +44,35 @@
     </header>
 
     <section class="content">
+        <!--<button id="openDetailPokemon">clica aqui</button>-->
 
         <Ol id="pokemonList" class="pokemons">
             <!--Dinâmico pelo JS-->
         </Ol>
+
+        <div id="modalOverlay" class="overlay">
+            <div id="modal" class="modal">
+                <!--<div class="pokemonDetailHeader">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Bulbasaur">
+                    <button id="closeDetailPokemon">✖</button>
+                </div>
+
+                <div id="pokemonDetailName"><p >Bulbasaur</p></div>
+
+                <div id="pokemonDetailLine"></div>
+
+                <div class="pokemonDetailBody">
+                    <p class="title">Weight</p>
+                    <p class="description">6</p>
+                    <p class="title">Height</p>
+                    <p class="description">7.92</p>
+                    <p class="title">Skills</p>
+                    <p class="description">Overgrow, Chlorophyl</p>
+                </div>-->
+
+
+            </div>
+        </div>
 
         <div class="pagination">
             <button id="loadMoreButton" type="button">Load more</button>
@@ -55,8 +81,9 @@
     </section>
 
     <!--JS-->
-    <script src="/assets/js/pokemon-model.js"></script>
     <script src="/assets/js/poke-api.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/pokemon-model.js"></script>
+    <script src="/assets/js/modal.js"></script>
 </body>
 </html>

@@ -1,8 +1,7 @@
 const pokemonList = document.getElementById('pokemonList');
 const loadMoreButton = document.getElementById('loadMoreButton');
 
-const limit = 10;
-let offset = 0;
+const modal = document.getElementById('modal');
 
 const maxRecords = 151;
 
@@ -12,25 +11,30 @@ function loadPokemonItens(offset, limit){
     
     pokeApi.getPokemons(offset, limit).then((pokemons = []) =>{
         const newHtml = pokemons.map((pokemon) => `
-            <li class="pokemon ${pokemon.type}">
-                        <span class="number">#${pokemon.number}</span>
-                        <span class="name">${pokemon.name}</span>
+            <li class="pokemon ${pokemon.type} openDetailPokemon" data-number="${pokemon.number}">
+                    <span class="number">#${pokemon.number}</span>
+                    <span class="name">${pokemon.name}</span>
 
-                        <div class="detail">
-                            <ol class="types">
-                                ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-                            </ol>
+                    <div class="detail">
+                        <ol class="types">
+                           ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                        </ol>
                             
-                            <img src="${pokemon.image}" 
-                            alt="${pokemon.name}">
-                        </div>
-                    
-                    </li>
+                        <img src="${pokemon.image}" 
+                        alt="${pokemon.name}">
+                    </div>      
+            </li>
                 `).join('');
 
         pokemonList.innerHTML += newHtml;
     })
 }
+
+// ----------------------------------------------------------
+
+
+
+// ----------------------------------------------------------
 
 loadPokemonItens(offset, limit);
 
@@ -49,6 +53,7 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit);
 })
 
+// -----------------------------------------
 
 const openMenuBtn = document.getElementById("openMenuBtn");
 const sideBar = document.getElementById("sidebar");
@@ -71,3 +76,10 @@ document.addEventListener("click", (event) => {
     sideBar.classList.remove("active");
   }
 });
+
+// -----------------------------------------
+
+
+
+// -----------------------------------------
+
