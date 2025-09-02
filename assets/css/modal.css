@@ -46,6 +46,7 @@
     color: #000000;
     position: relative;
     text-align: center;
+    text-transform: capitalize;
     font-size: 30px;
     font-weight: 700;
     top: 1rem;
@@ -59,4 +60,33 @@
 
 .pokemonDetailBody .description{
     font-size: 18px;
+    text-transform: capitalize;
+}
+
+@media screen and (min-width: 576px) {
+  .pokemonDetailHeader{
+    justify-content: end;
+  }
+  .modal #closeDetailPokemon{
+   position: absolute;
+  }
+
+  .pokemonDetailHeader img{
+    margin: 0 auto;
+    width: 14rem;
+  }
+
+  .pokemonDetailBody .title{
+    text-align: end;
+  }
+
+  .pokemonDetailBody .description{
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal{
+    max-width: 660px;
+  }
 }
