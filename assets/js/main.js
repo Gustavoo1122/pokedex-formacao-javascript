@@ -5,8 +5,6 @@ const modal = document.getElementById('modal');
 
 const maxRecords = 151;
 
-
-
 function loadPokemonItens(offset, limit){
     
     pokeApi.getPokemons(offset, limit).then((pokemons = []) =>{
@@ -30,12 +28,6 @@ function loadPokemonItens(offset, limit){
     })
 }
 
-// ----------------------------------------------------------
-
-
-
-// ----------------------------------------------------------
-
 loadPokemonItens(offset, limit);
 
 loadMoreButton.addEventListener('click', () => {
@@ -52,8 +44,6 @@ loadMoreButton.addEventListener('click', () => {
     else
         loadPokemonItens(offset, limit);
 })
-
-// -----------------------------------------
 
 const openMenuBtn = document.getElementById("openMenuBtn");
 const sideBar = document.getElementById("sidebar");
@@ -76,8 +66,6 @@ document.addEventListener("click", (event) => {
     sideBar.classList.remove("active");
   }
 });
-
-// -----------------------------------------
 
 
 

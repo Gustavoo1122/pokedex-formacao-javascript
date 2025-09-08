@@ -1,3 +1,8 @@
+let pokemons = [];
+
+const overlayModal = document.getElementById('modalOverlay');
+const modalDetail = document.getElementById('modal');
+
 function loadDetailPokemon (pokemon){
     const newHtml = `
                       <div class="pokemonDetailHeader">
@@ -21,20 +26,16 @@ function loadDetailPokemon (pokemon){
     modal.innerHTML = newHtml;
 }
 
-let pokemons = [];
-
-const overlay = document.getElementById('modalOverlay');
-const closeDetailPokemon = document.getElementById('closeDetailPokemon');
-
 pokeApi.getPokemons().then((pokemonsDetails) => {
   pokemons = pokemonsDetails; // Todos os pokemons carregados ficam aqui
 });
 
 pokemonList.addEventListener("click", (event) => {
+
   const clickedPokemon = event.target.closest('.openDetailPokemon');
 
   if(clickedPokemon){
-    overlay.style.display = 'flex';
+    overlayModal.style.display = 'flex';
   }
   
   const pokemonNumber = clickedPokemon.getAttribute("data-number");
@@ -43,15 +44,15 @@ pokemonList.addEventListener("click", (event) => {
 
   loadDetailPokemon(pokemonDetail);
   
-  overlay.addEventListener("click", (event) => {
-    if(event.target === overlay)
-      overlay.style.display = 'none';
+  overlayModal.addEventListener("click", (event) => {
+    if(event.target === overlayModal)
+      overlayModal.style.display = 'none';
   })
 })
 
-closeDetailPokemon.addEventListener("click", (event) => {
-  const clickedCloseDetail = event.target.closest('.closeDetailPokemon');
-  if(clickedCloseDetail){
-    overlay.style.display = 'none';
+modalDetail.addEventListener("click", (event) => {
+  const closeDetailPokemon = event.target.closest('#closeDetailPokemon')
+  if(closeDetailPokemon){
+    overlayModal.style.display = 'none';
   }
 })

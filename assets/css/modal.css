@@ -18,7 +18,7 @@
 }
 
 .pokemonDetailHeader img{
-    background-color: #eaeaea;
+    background-color: #EAEAEA;
     padding: .5rem;
     border-radius: 1rem;
     width: 48%;
@@ -54,7 +54,7 @@
 
 .pokemonDetailBody .title{
     font-weight: 600;
-    color: #8f8f8f;
+    color: #8F8F8F;
     font-size: 18px;
 }
 
