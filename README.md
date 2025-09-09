@@ -8,7 +8,7 @@ A ideia foi criar uma ferramenta simples, dinâmica e interativa que consome a [
 ## 🚀 Tecnologias utilizadas
 - **Node.js** → Criação do servidor e gerenciamento da aplicação.
 - **HTML5 / CSS3** → Estrutura e estilização da interface.
-- **JavaScript (ES6+)** → Manipulação do DOM e lógica da aplicação.
+- **JavaScript** → Manipulação do DOM e lógica da aplicação.
 - **PokéAPI** → Fonte oficial de dados dos Pokémons.
 
 ---
