@@ -3,6 +3,9 @@ const loadMoreButton = document.getElementById('loadMoreButton');
 
 const modal = document.getElementById('modal');
 
+const darkModeButton = document.getElementById('btnDarkMode');
+const body = document.body;
+
 const maxRecords = 151;
 
 function loadPokemonItens(offset, limit){
@@ -59,15 +62,19 @@ closeMenuBtn.addEventListener("click", () => {
 
 document.addEventListener("click", (event) => {
   if (
-    sideBar.classList.contains("active") && // só verifica se estiver aberto
-    !sideBar.contains(event.target) &&      // clique não foi dentro do menu
-    event.target !== openMenuBtn                // clique não foi no botão abrir
+    sideBar.classList.contains("active") &&
+    !sideBar.contains(event.target) &&
+    event.target !== openMenuBtn                
   ) {
     sideBar.classList.remove("active");
   }
 });
 
+darkModeButton.addEventListener("click", () => {
+  body.classList.toggle('darkMode');
 
-
-// -----------------------------------------
-
+  if(body.classList.contains('darkMode'))
+    darkModeButton.innerText = '☀︎';
+  else
+    darkModeButton.innerText = '⏾';
+})

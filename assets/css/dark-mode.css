@@ -1,0 +1,68 @@
+body.darkMode{
+  background-color: #292b33;
+}
+
+body.darkMode #btnDarkMode{
+  color: #FFFFFF;
+  background-color: #58617e;
+  margin-right: 30px;
+  transition: 1s;
+}
+
+body.darkMode .backgroundBtnDarkMode{
+  background-color: #F5F8FD;
+  transition: 1s;
+}
+
+body.darkMode .content{
+  background: #2F323C;
+}
+
+body.darkMode .header{
+  background-color: #2F323C;
+}
+
+body.darkMode .header h1{
+  color: #FFFFFF;
+}
+
+body.darkMode .headerBar .openMenuBtn{
+  color: #FFFFFF;
+}
+
+body.darkMode .pagination button{
+  background-color: #292b33;
+  color: #FFFFFF;
+}
+
+body.darkMode .pagination button:hover{
+  background-color: #1f2125;
+}
+
+body.darkMode .headerBar .openMenuBtn:hover{
+  background-color: #434652;
+}
+
+body.darkMode .sidebar{
+  background-color: #F5F8FD;
+}
+
+body.darkMode .sidebar a{
+  color: #292b33;
+}
+
+body.darkMode .sidebar #closeMenuBtn{
+  color: #292b33;
+}
+
+body.darkMode .sidebar li:hover{
+  background-color: #e0e0e0;
+}
+
+body.darkMode .sidebar #closeMenuBtn:hover{
+    background-color: #e0e0e0;
+}
+
+body.darkMode .sidebar p{
+  color: #292b33;
+}

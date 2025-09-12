@@ -7,7 +7,7 @@
   left: -250px;
   width: 250px;
   height: 100%;
-  background: #5D96C4;
+  background: #2F323C;
   color: #FFFFFF;
   padding: 1rem;
   transition: left 0.5s ease;
@@ -31,7 +31,7 @@
 }
 
 .sidebar li:hover{
-    background-color: #5184AE;
+    background-color: #434652;
 }
 
 .sidebar a{
@@ -52,5 +52,5 @@
 }
 
 .sidebar #closeMenuBtn:hover{
-    background-color: #5184AE;
+    background-color: #434652;
 }

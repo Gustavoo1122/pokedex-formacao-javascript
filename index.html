@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="stylesheet" href="/assets/css/modal.css">
     <link rel="stylesheet" href="/assets/css/sidebar.css">
+    <link rel="stylesheet" href="/assets/css/dark-mode.css">
     
     <!-- Font Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,15 +24,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header id="header" class="header">
         <h1>Pokedex</h1>
 
         <div class="headerBar">
+            <div class="backgroundBtnDarkMode">
+                <button id="btnDarkMode">⏾</button>
+            </div>
             <button id="openMenuBtn" class="openMenuBtn" type="button">☰</button>
         </div>
         
         <nav id="sidebar" class="sidebar">
-            
             <ul>
                 <button id="closeMenuBtn">✖</button>
                 <li><a href="#">Home</a></li>
@@ -39,12 +42,9 @@
             </ul>
             <p>Developed by Gustavo Pereira</p>
         </nav>
-
     </header>
 
-    <section class="content">
-        <!--<button id="openDetailPokemon">clica aqui</button>-->
-
+    <section id="content" class="content">
         <Ol id="pokemonList" class="pokemons">
             <!--Dinâmico pelo JS-->
         </Ol>
@@ -58,7 +58,6 @@
         <div class="pagination">
             <button id="loadMoreButton" type="button">Load more</button>
         </div>
-
     </section>
 
     <!--JS-->
